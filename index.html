@@ -6,6 +6,32 @@
         <script type="text/javascript" src="./js/main.js"></script>
     </head>
     <body>
+        <!-- Passagem de parâmetro fixo -->
+        <button type="button" onclick="clicou(1)">Carro 1</button>
+        <button type="button" onclick="clicou(2)">Carro 2</button>
+        <button type="button" onclick="clicou(3)">Carro 3</button>
+        <button type="button" onclick="titulo()">Texto</button>
         
+        <!-- Passagem de parâmetro dinâmica -->
+        <select onchange="clicou(this.value)">
+            <option value="1">Carro 1</option>
+            <option value="2">Carro 2</option>
+            <option value="3">Carro 3</option>
+        </select>
+
+        <a href="#" onclick="redirecionar()">Site de carros:</a>
+        
+        <!-- O próprio elemento html passado como parâmetro -->
+        <div id="carro1" style="display: none;">
+            <img src="./images/carro1.jpg" onmouseover="ampliar(this)" onmouseout="reduzir(this)"/>
+        </div>
+        <div id="carro2" style="display: none;">
+            <img src="./images/carro2.jpg" onmouseover="ampliar(this)" onmouseout="reduzir(this)"/>
+        </div>
+        <div id="carro3" style="display: none;">
+            <img src="./images/carro3.jpg" onmouseover="ampliar(this)" onmouseout="reduzir(this)"/>
+        </div>
+
+        <button type="button" onclick="calculo()">Calculo</button>
     </body>
 </html>
